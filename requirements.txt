@@ -1,0 +1,26 @@
+# Use the CPU-only build of PyTorch. On Linux hosts the default build bundles
+# GPU libraries (several GB), which is too large for free hosting.
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# --- Document loading ---
+pypdf>=4.0              # extract text from PDFs, page by page
+python-docx>=1.1        # extract text from .docx files
+
+# --- Embeddings + vector store ---
+sentence-transformers>=3.0   # all-MiniLM-L6-v2 embedding model (pulls in PyTorch)
+chromadb>=0.5                # vector database persisted on disk
+
+# --- LLM ---
+ollama>=0.3             # Python client for the local Ollama server
+requests>=2.31          # HTTP calls to the optional hosted LLM (Groq)
+
+# --- Web UI ---
+streamlit>=1.36
+
+# --- Evaluation ---
+datasets>=2.20          # Hugging Face datasets (SQuAD)
+rank-bm25>=0.2.2        # keyword search, for the vector-vs-hybrid comparison
+pandas>=2.2             # results table + CSV export
+
+# --- Config ---
+python-dotenv>=1.0      # read settings from .env

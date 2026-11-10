@@ -1,0 +1,20 @@
+# Secrets and local config
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local data that should not be in the repo
+chroma_db/
+demo_docs/*.pdf
+results/*.tmp
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.claude/
+.vscode/
+.idea/
